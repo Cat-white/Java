@@ -63,12 +63,16 @@ x.equals(null); // false;
 
 - 对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。
 - 对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。
+- 对于自定义类，== 判断两个变量是否引用同一个对象，而 equals() 需要自己实现判断方式，没有实现则会默认调用父类Object的判断方式，此时等价与 ==。
 
 ```java
 Integer x = new Integer(1);
 Integer y = new Integer(1);
 System.out.println(x.equals(y)); // true
 System.out.println(x == y);      // false
+NewObject ob1 = new NewObject("object");
+NewObject ob2 = new NewObject("object");
+System.out.println("ob1.equals(ob2):" + ob1.equals(ob2));   // false
 ```
 
 **3. 实现** 
