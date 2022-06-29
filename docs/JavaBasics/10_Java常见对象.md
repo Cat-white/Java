@@ -158,6 +158,9 @@ public int hashCode() {
 ### toString() 方法
 
 默认返回 ToStringExample@4554617c 这种形式，其中 @ 后面的数值为散列码的无符号十六进制表示。
+一般具体类的toString()方法都是需要重写的，以适配相应的需要。
+Integer的toString()类已经重写过了，可以直接调用，将数字转换为String.
+
 
 ```java
 public class ToStringExample {
